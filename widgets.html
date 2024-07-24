@@ -1,73 +1,146 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <title>Agric Link</title>
-  <!-- Meta tags for character set and viewport -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- External CSS stylesheets -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" type="text/css">
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css" type="text/css">
-  <link rel="stylesheet" href="css/frame.css" type="text/css">
-  <link rel="stylesheet" href="css/controls.css" type="text/css">
-  <link rel="stylesheet" href="css/widgets.css" type="text/css">
-  <link rel="stylesheet" href="css/custom.css" type="text/css">
-
-  <!-- Google Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-
-  <!-- External JavaScript libraries -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-
-  <!-- Custom JavaScript files -->
-  <script src="js/menu.js"></script>
-  <script src="js/footer.js"></script>
-  <script src="js/widgets.js"></script>
-  <script src="js/util.js"></script>
-  <script src="js/custom.js"></script>
-
-  <!-- Internal CSS styles -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agric Link Documentation</title>
   <style>
-    .menu-widget {
-      color: rgb(255, 255, 255) !important;
-      opacity: 1 !important;
-      font-weight: 700 !important;
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      background-color: #f0f5f9;
+      color: #333;
+      margin: 0;
+      padding: 20px;
     }
 
-    /* Faint blue color */
-    .faint-blue {
+    h1,
+    h2,
+    h3 {
       color: #88a8b9;
-      background-color: #f0f5f9;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .code {
+      background-color: #f8f8f8;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+
+    .highlight {
+      color: #0056b3;
+      font-weight: bold;
+    }
+
+    .emphasis {
+      font-style: italic;
     }
   </style>
 </head>
 
 <body>
-  <!-- Menu and content containers -->
-  <div class="menu-container"></div>
-  <div class="content-container">
-    <div class="content">
-      <div class="content-table flex-column">
-        
-        <!-- Placeholder for Image -->
-        <div class="flex-row faint-blue">
-          <div class="flex-item flex-column">
-            <h2 class="faint-blue">Insert Your Image Here</h2>
-            <!-- Example of image insertion -->
-            <img src="path/to/your/image.jpg" alt="Your Image">
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  
-  <!-- Footer -->
-  <div class="footer"></div>
+  <div class="container">
+    <header>
+      <h1>Agric Link Documentation</h1>
+    </header>
 
+    <section class="section">
+      <h2>Introduction</h2>
+      <p>
+        Agric Link is a web application designed to connect farmers and suppliers, facilitating seamless product transactions and real-time communication. This document outlines its structure, design principles, and functionality.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Technical Details</h2>
+      <ul>
+        <li><strong>HTML5 Structure:</strong> Uses modern HTML5 elements for semantic markup.</li>
+        <li><strong>CSS Styling:</strong> Custom stylesheets for layout, typography, and color schemes.</li>
+        <li><strong>JavaScript Libraries:</strong> Integrates jQuery and jQuery UI for interactive elements.</li>
+        <li><strong>Custom Scripts:</strong> Implements custom JavaScript for enhanced functionality.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Design Philosophy</h2>
+      <ul>
+        <li><strong>Responsive Design:</strong> Ensures optimal viewing experience across devices.</li>
+        <li><strong>Accessibility:</strong> Prioritizes accessibility standards for all users.</li>
+        <li><strong>User Interface:</strong> Intuitive interface for ease of navigation and interaction.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Features Overview</h2>
+
+      <section class="section">
+        <h3>Menu and Navigation</h3>
+        <ul>
+          <li><strong>Menu Container:</strong> Houses navigation elements for seamless user experience.</li>
+          <li><strong>Responsive Design:</strong> Adjusts menu layout based on device screen size.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3>Content Presentation</h3>
+        <ul>
+          <li><strong>Content Containers:</strong> Organizes information into structured content areas.</li>
+          <li><strong>Flexbox Layout:</strong> Utilizes flexbox for flexible and responsive content arrangement.</li>
+          <li><strong>Faint Blue Accent:</strong> Subtle use of faint blue (#88a8b9) for aesthetic enhancement.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3>Image Insertion</h3>
+        <ul>
+          <li><strong>Image Placeholder:</strong> Provides a designated area for image insertion.</li>
+          <li><strong>Customization:</strong> Easily replace placeholder with actual images using standard HTML <code>&lt;img&gt;</code> tag.</li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="section">
+      <h2>Implementation</h2>
+
+      <section class="section">
+        <h3>External Resources</h3>
+        <ul>
+          <li><strong>Fonts and Icons:</strong> Integrates Google Fonts and Font Awesome for typography and icons.</li>
+          <li><strong>CSS Styling:</strong> Modular CSS files for distinct design components.</li>
+          <li><strong>JavaScript Functionality:</strong> Custom scripts enhance user interaction and functionality.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3>Customization Options</h3>
+        <ul>
+          <li><strong>Color Scheme:</strong> Customizable color palette with a faint blue accent for visual appeal.</li>
+          <li><strong>Image Integration:</strong> Simple integration of images via standard HTML tags for flexibility.</li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="section">
+      <h2>Conclusion</h2>
+      <p>
+        Agric Link blends functionality with aesthetics, providing a robust platform for agricultural stakeholders to connect and transact efficiently. With its user-centric design and responsive layout, it sets a benchmark for modern web applications in the agricultural sector.
+      </p>
+    </section>
+  </div>
 </body>
 
 </html>
