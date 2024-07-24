@@ -1,5 +1,5 @@
 ---
-name: Feature request
+name: Agric Link
 about: Suggest an idea for this project
 title: ''
 labels: ''
