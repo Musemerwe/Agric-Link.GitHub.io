@@ -1,179 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agric Link App Workflow</title>
+  <title>Agric Link</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/footer.js"></script>
   <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      line-height: 1.6;
-      background-color: #f0f5f9;
-      color: #333;
-      margin: 0;
-      padding: 20px;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h1,
-    h2,
-    h3 {
-      color: #88a8b9;
-    }
-
-    h2 {
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-
-    h3 {
-      margin-top: 20px;
-    }
-
-    p {
-      margin-bottom: 15px;
-    }
-
-    ul {
-      margin-bottom: 15px;
-    }
-
-    ol {
-      margin-bottom: 15px;
-    }
-
-    code {
-      background-color: #f8f8f8;
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-
-    .emphasis {
-      font-style: italic;
+    .menu-index {
+      color: rgb(255, 255, 255) !important;
+      opacity: 1 !important;
+      font-weight: 700 !important;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <h1>Agric Link App Workflow</h1>
-    </header>
-
-    <section>
-      <h2>Overview</h2>
-      <p>
-        The Agric Link app operates with distinct workflows tailored for farmers and suppliers, ensuring a smooth user experience and efficient transactions in the agricultural sector.
-      </p>
-    </section>
-
-    <section>
-      <h2>Farmer's Workflow</h2>
-      <ol>
-        <li>
-          <h3>Account Creation</h3>
-          <ul>
-            <li><strong>Register:</strong> Farmers create an account by providing their email and password on the registration page (<code>/register</code>).</li>
-            <li><strong>Login:</strong> Farmers log in using their credentials on the login page (<code>/login</code>).</li>
-          </ul>
-        </li>
-        <li>
-          <h3>Posting Products</h3>
-          <ul>
-            <li><strong>Farmer Account Page:</strong> After logging in, farmers navigate to their account page (<code>/farmer_account</code>), where they can upload images of their agricultural products.</li>
-            <li><strong>Uploading Images:</strong> Farmers use the image picker to select images from their device, which are uploaded to Firebase Storage.</li>
-            <li><strong>Posting Details:</strong> Farmers fill out a form with product details such as name, category, quantity, price, location, and contact information. This information is stored in Firestore under the 'products' collection.</li>
-          </ul>
-        </li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>Supplier's Workflow</h2>
-      <ol>
-        <li>
-          <h3>Account Creation</h3>
-          <ul>
-            <li><strong>Register:</strong> Suppliers create an account by providing their email and password on the registration page (<code>/register</code>).</li>
-            <li><strong>Login:</strong> Suppliers log in using their credentials on the login page (<code>/login</code>).</li>
-          </ul>
-        </li>
-        <li>
-          <h3>Browsing Products</h3>
-          <ul>
-            <li><strong>Home Page:</strong> After logging in, suppliers land on the home page (<code>/home</code>), displaying a list of product categories (e.g., Fruits, Vegetables).</li>
-            <li><strong>Selecting a Category:</strong> Suppliers click on a category to view a list of products within that category.</li>
-          </ul>
-        </li>
-        <li>
-          <h3>Viewing Product Details</h3>
-          <ul>
-            <li><strong>Product List Page:</strong> Upon selecting a category, suppliers are taken to the product list page (<code>/product_list</code>), where they can see all products in that category.</li>
-            <li><strong>Selecting a Product:</strong> Suppliers click on a specific product to view more details, including the farmers who posted it, quantity, price, location, and contact information.</li>
-          </ul>
-        </li>
-        <li>
-          <h3>Initiating Chat</h3>
-          <ul>
-            <li><strong>Product Details Page:</strong> Suppliers can initiate a chat with the farmer by clicking the 'Chat with Farmer' button on the product details page (<code>/product_details</code>).</li>
-          </ul>
-        </li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>Chat Functionality</h2>
-      <ul>
-        <li><strong>Chat Page:</strong> When a supplier initiates a chat with a farmer, they are taken to a chat page (<code>/chat</code>) where they can send and receive messages in real-time.</li>
-        <li><strong>Real-time Messaging:</strong> Messages are stored in Firestore under a specific chat document for each farmer-supplier pair, ensuring real-time updates.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Technical Details</h2>
-      <ol>
-        <li><strong>Firebase Authentication:</strong> Manages user registration and login securely.</li>
-        <li><strong>Firestore Database:</strong> Stores user information, product details, and chat messages.</li>
-        <li><strong>Firebase Storage:</strong> Stores images uploaded by farmers and provides URLs for integration.</li>
-        <li><strong>Image Picker:</strong> Allows farmers to select and upload images of products.</li>
-        <li><strong>Provider:</strong> Manages state within the app for data consistency and smooth user experience.</li>
-        <li><strong>Google Maps Integration:</strong> Utilizes Google Maps API in <code>product_map_page.dart</code> to display farmer locations.</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>Example Scenarios</h2>
-
-      <section>
-        <h3>Scenario 1: Farmer Posts a Product</h3>
-        <ol>
-          <li>Farmer registers/logs in and navigates to the Farmer Account Page.</li>
-          <li>Farmer uploads an image of a product (e.g., apples) and enters details such as category, quantity, price, location, and contact information.</li>
-          <li>Product details and image URL are saved in Firestore under the 'products' collection.</li>
-        </ol>
-      </section>
-
-      <section>
-        <h3>Scenario 2: Supplier Browses and Chats</h3>
-        <ol>
-          <li>Supplier registers/logs in and navigates to the Home Page.</li>
-          <li>Supplier selects a category (e.g., Fruits) and views a list of products within that category.</li>
-          <li>Supplier clicks on a specific product to view details, including the farmer's contact information.</li>
-          <li>Supplier initiates a chat with the farmer to discuss the product further.</li>
-        </ol>
-      </section>
-    </section>
-  </div>
-</body>
-
-</html>
+  <div class="menu-container"></div>
+  <div class="content-container">
+    <!--Start Header-->
+    <div class="banner" style="background: url('img/farmer.jpg') no-repeat center; background-size: cover; height: 300px;"></div>
+    <div class="banner">
+      <div class="banner-table flex-column">
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 class="add-top-margin-small">Welcome to Agric Link</h2>
+            <p class="text">
+              Agric Link connects farmers with consumers looking to purchase farm products directly. Our platform aims to bridge the gap between local producers and buyers, promoting sustainable agriculture and supporting local communities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Header-->
+    <div class="content">
+      <div class="content-table flex-column">
+        <!--Start Intro-->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <img class="image" src="img/farmer.jpg">
+          </div>
+          <div class="flex-item flex-column">
+            <p class="text text-large">
+              <strong>Meet the Team:</strong><br>
+              <a href="mailto:charles@example.com">Musemerwe Charles</a>, charles@gmail.com<br>
+              <a href="mailto:stuart@example.com">Owani Stuart</a>, stuart@gmail.com<br>
+              <a href="mailto:timothy@example.com">Opifeni Timothy Jurua</a>, timothy@gmail.com<br>
+              <a href="mailto:steven@example.com">Ssemambo Steven</a>, steven@gmail.com<br>
+              <a href="mailto:joshua@example.com">Shima Joshua</a>, joshua@gmail.com
+            </p>
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <p class="text add-top-margin">
+              Agric Link offers a simple and efficient platform for farmers to list their products, set prices, and reach a wider audience. Buyers can browse listings, compare prices, and purchase directly from the source, ensuring fresh and high-quality products. Join us in fostering a sustainable food system that benefits both farmers and consumers.
+            </p>
+            <h3>Table of Content</h3>
+            <ul>
+              <li><a href="#text-only">Text Only</a></li>
+              <li><a href="#buttons-and-inputs">Buttons and Inputs</a></li>
+              <li><a href="#images-and-image-button">Images and Image Button</a></li>
+              <li><a href="#text-around-image">Text around Image</a></li>
+              <li><a href="#centered-image-and-table">Centered Image and Table</a></li>
+              <li><a href="#adaptive-image">Adaptive Image</a></li>
+              <li><a href="#text-with-images-and-videos">Text with Images and Videos</a></li>
+              <li><a href="#iframe">Iframe</a></li>
+              <li><a href="#list-of-projects">List of Projects</a></li>
+              <li><a href="#gallery">Gallery (responsive size)</a></li>
+              <li><a href="#masonry">Masonry (responsive size)</a></li>
+              <li><a href="#survey">Survey</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--End Intro-->
+        
+              
+             
