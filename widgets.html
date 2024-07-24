@@ -34,7 +34,7 @@
           <div class="flex-item flex-column">
             <h2 class="add-top-margin-small">Welcome to Agric Link</h2>
             <p class="text">
-              Agric Link connects farmers with consumers looking to purchase farm products directly. Our platform aims to bridge the gap between local producers and buyers, promoting sustainable agriculture and supporting local communities.
+              The app operates with distinct workflows for farmers and suppliers, ensuring a smooth user experience tailored to their specific needs.
             </p>
           </div>
         </div>
@@ -49,6 +49,49 @@
             <img class="image" src="img/farmer.jpg">
           </div>
           <div class="flex-item flex-column">
+           <p class="points">Farmer's Workflow:</p>
+             <p class="points">Account Creation:</p>
+               <ul>
+               <li>Point 1: Register:  Farmers will create an account by providing their email and password on the registration page.</li>
+               <li>Point 2: Login: Farmers log in using their email and password on the login page.</li>
+               <li>Point 3: Description of point 3.</li>
+               </ul>
+
+              <p class="points">Posting Products:</p>
+               <ul>
+               <li>Point 1: Farmer Account Page: After logging in, farmers navigate to their account page where they can upload images of their agricultural products and provide detailed information.</li>
+               <li>Point 2: Uploading Images: Farmers use the image picker to select images from their device. The selected image is uploaded to Firebase Storage, and the URL is saved in Firestore.</li>
+               <li>Point 3: Posting Details: Farmers fill out a form with product details such as name, category, quantity, price, location, and contact information. This information, along with the image URL, is stored in Firestore under a 'products' collection.</li>
+               </ul>
+           <p class="points">Supplier's Workflow:</p>
+             <p class="points">Account Creation:</p>
+               <ul>
+               <li>Point 1: Register: Suppliers will create an account by providing their email and password on the registration page.</li>
+               <li>Point 2: Login: Suppliers log in using their email and password on the login page.</li>
+               <li>Point 3: Description of point 3.</li>
+               </ul>
+
+              <p class="points">Browsing Products:</p>
+               <ul>
+               <li>Point 1: Home Page: After logging in, suppliers land on the home page (`/home`), which displays a list of product categories (e.g., Fruits, Vegetables).</li>
+               <li>Point 2: Selecting a Category: Suppliers click on a category to view a list of products within that category.</li>
+               </ul>
+ 
+   
+   
+               <p class="points">Viewing Product Details:</p>
+                <ul>
+                <li>Point 1: Product List Page: Upon selecting a category, suppliers are taken to the product list page (`/product_list`) where they can see all products in that category..</li>
+                <li>Point 2: Selecting a Product: Suppliers click on a specific product to view more details.</li>
+                <li>Point 3: Description of point 3.</li>
+                </ul>
+
+              <p class="points">Viewing Farmer Details:</p>
+               <ul>
+               <li>Point 1: Product Details Page: Suppliers are taken to a page (`/product_details`) displaying detailed information about the selected product, including the farmers who posted it, their quantity, price, location, and contact information.</li>
+               <li>Point 2: Initiating Chat:Suppliers can initiate a chat with the farmer by clicking the 'Chat with Farmer' button.</li>
+               </ul> 
+
             <p class="text text-large">
               <strong>Meet the Team:</strong><br>
               <a href="mailto:charles@example.com">Musemerwe Charles</a>, charles@gmail.com<br>
