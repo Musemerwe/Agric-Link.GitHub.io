@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agric Link Documentation</title>
+  <title>Agric Link App Workflow</title>
   <style>
     body {
       font-family: 'Open Sans', sans-serif;
@@ -55,90 +55,111 @@
 <body>
   <div class="container">
     <header>
-      <h1>Agric Link Documentation</h1>
+      <h1>Agric Link App Workflow</h1>
     </header>
 
     <section class="section">
-      <h2>Introduction</h2>
+      <h2>Overview</h2>
       <p>
-        Agric Link is a web application designed to connect farmers and suppliers, facilitating seamless product transactions and real-time communication. This document outlines its structure, design principles, and functionality.
+        The Agric Link app operates with distinct workflows tailored for farmers and suppliers, ensuring a smooth user experience and efficient transactions in the agricultural sector.
       </p>
+    </section>
+
+    <section class="section">
+      <h2>Farmer's Workflow</h2>
+      <ol>
+        <li>
+          <h3>Account Creation</h3>
+          <ul>
+            <li><strong>Register:</strong> Farmers create an account by providing their email and password on the registration page (<code>/register</code>).</li>
+            <li><strong>Login:</strong> Farmers log in using their credentials on the login page (<code>/login</code>).</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Posting Products</h3>
+          <ul>
+            <li><strong>Farmer Account Page:</strong> After logging in, farmers navigate to their account page (<code>/farmer_account</code>), where they can upload images of their agricultural products.</li>
+            <li><strong>Uploading Images:</strong> Farmers use the image picker to select images from their device, which are uploaded to Firebase Storage.</li>
+            <li><strong>Posting Details:</strong> Farmers fill out a form with product details such as name, category, quantity, price, location, and contact information. This information is stored in Firestore under a 'products' collection.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2>Supplier's Workflow</h2>
+      <ol>
+        <li>
+          <h3>Account Creation</h3>
+          <ul>
+            <li><strong>Register:</strong> Suppliers create an account by providing their email and password on the registration page (<code>/register</code>).</li>
+            <li><strong>Login:</strong> Suppliers log in using their credentials on the login page (<code>/login</code>).</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Browsing Products</h3>
+          <ul>
+            <li><strong>Home Page:</strong> After logging in, suppliers land on the home page (<code>/home</code>), displaying a list of product categories (e.g., Fruits, Vegetables).</li>
+            <li><strong>Selecting a Category:</strong> Suppliers click on a category to view a list of products within that category.</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Viewing Product Details</h3>
+          <ul>
+            <li><strong>Product List Page:</strong> Upon selecting a category, suppliers are taken to the product list page (<code>/product_list</code>), where they can see all products in that category.</li>
+            <li><strong>Selecting a Product:</strong> Suppliers click on a specific product to view more details, including the farmers who posted it, quantity, price, location, and contact information.</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Initiating Chat</h3>
+          <ul>
+            <li><strong>Product Details Page:</strong> Suppliers can initiate a chat with the farmer by clicking the 'Chat with Farmer' button on the product details page (<code>/product_details</code>).</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2>Chat Functionality</h2>
+      <ul>
+        <li><strong>Chat Page:</strong> When a supplier initiates a chat with a farmer, they are taken to a chat page (<code>/chat</code>) where they can send and receive messages in real-time.</li>
+        <li><strong>Real-time Messaging:</strong> Messages are stored in Firestore under a specific chat document for each farmer-supplier pair, ensuring real-time updates.</li>
+      </ul>
     </section>
 
     <section class="section">
       <h2>Technical Details</h2>
-      <ul>
-        <li><strong>HTML5 Structure:</strong> Uses modern HTML5 elements for semantic markup.</li>
-        <li><strong>CSS Styling:</strong> Custom stylesheets for layout, typography, and color schemes.</li>
-        <li><strong>JavaScript Libraries:</strong> Integrates jQuery and jQuery UI for interactive elements.</li>
-        <li><strong>Custom Scripts:</strong> Implements custom JavaScript for enhanced functionality.</li>
-      </ul>
+      <ol>
+        <li><strong>Firebase Authentication:</strong> Manages user registration and login securely.</li>
+        <li><strong>Firestore Database:</strong> Stores user information, product details, and chat messages.</li>
+        <li><strong>Firebase Storage:</strong> Stores images uploaded by farmers and provides URLs for integration.</li>
+        <li><strong>Image Picker:</strong> Allows farmers to select and upload images of products.</li>
+        <li><strong>Provider:</strong> Manages state within the app for data consistency and smooth user experience.</li>
+        <li><strong>Google Maps Integration:</strong> Utilizes Google Maps API in <code>product_map_page.dart</code> to display farmer locations.</li>
+      </ol>
     </section>
 
     <section class="section">
-      <h2>Design Philosophy</h2>
-      <ul>
-        <li><strong>Responsive Design:</strong> Ensures optimal viewing experience across devices.</li>
-        <li><strong>Accessibility:</strong> Prioritizes accessibility standards for all users.</li>
-        <li><strong>User Interface:</strong> Intuitive interface for ease of navigation and interaction.</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Features Overview</h2>
+      <h2>Example Scenarios</h2>
 
       <section class="section">
-        <h3>Menu and Navigation</h3>
-        <ul>
-          <li><strong>Menu Container:</strong> Houses navigation elements for seamless user experience.</li>
-          <li><strong>Responsive Design:</strong> Adjusts menu layout based on device screen size.</li>
-        </ul>
+        <h3>Scenario 1: Farmer Posts a Product</h3>
+        <ol>
+          <li>Farmer registers/logs in and navigates to the Farmer Account Page.</li>
+          <li>Farmer uploads an image of a product (e.g., apples) and enters details such as category, quantity, price, location, and contact information.</li>
+          <li>Product details and image URL are saved in Firestore under the 'products' collection.</li>
+        </ol>
       </section>
 
       <section class="section">
-        <h3>Content Presentation</h3>
-        <ul>
-          <li><strong>Content Containers:</strong> Organizes information into structured content areas.</li>
-          <li><strong>Flexbox Layout:</strong> Utilizes flexbox for flexible and responsive content arrangement.</li>
-          <li><strong>Faint Blue Accent:</strong> Subtle use of faint blue (#88a8b9) for aesthetic enhancement.</li>
-        </ul>
+        <h3>Scenario 2: Supplier Browses and Chats</h3>
+        <ol>
+          <li>Supplier registers/logs in and navigates to the Home Page.</li>
+          <li>Supplier selects a category (e.g., Fruits) and views a list of products within that category.</li>
+          <li>Supplier clicks on a specific product to view details, including the farmer's contact information.</li>
+          <li>Supplier initiates a chat with the farmer to discuss the product further.</li>
+        </ol>
       </section>
-
-      <section class="section">
-        <h3>Image Insertion</h3>
-        <ul>
-          <li><strong>Image Placeholder:</strong> Provides a designated area for image insertion.</li>
-          <li><strong>Customization:</strong> Easily replace placeholder with actual images using standard HTML <code>&lt;img&gt;</code> tag.</li>
-        </ul>
-      </section>
-    </section>
-
-    <section class="section">
-      <h2>Implementation</h2>
-
-      <section class="section">
-        <h3>External Resources</h3>
-        <ul>
-          <li><strong>Fonts and Icons:</strong> Integrates Google Fonts and Font Awesome for typography and icons.</li>
-          <li><strong>CSS Styling:</strong> Modular CSS files for distinct design components.</li>
-          <li><strong>JavaScript Functionality:</strong> Custom scripts enhance user interaction and functionality.</li>
-        </ul>
-      </section>
-
-      <section class="section">
-        <h3>Customization Options</h3>
-        <ul>
-          <li><strong>Color Scheme:</strong> Customizable color palette with a faint blue accent for visual appeal.</li>
-          <li><strong>Image Integration:</strong> Simple integration of images via standard HTML tags for flexibility.</li>
-        </ul>
-      </section>
-    </section>
-
-    <section class="section">
-      <h2>Conclusion</h2>
-      <p>
-        Agric Link blends functionality with aesthetics, providing a robust platform for agricultural stakeholders to connect and transact efficiently. With its user-centric design and responsive layout, it sets a benchmark for modern web applications in the agricultural sector.
-      </p>
     </section>
   </div>
 </body>
