@@ -17,8 +17,6 @@
 
   <!-- Google Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
 
   <!-- External JavaScript libraries -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -38,6 +36,12 @@
       opacity: 1 !important;
       font-weight: 700 !important;
     }
+
+    /* Faint blue color */
+    .faint-blue {
+      color: #88a8b9;
+      background-color: #f0f5f9;
+    }
   </style>
 </head>
 
@@ -48,199 +52,12 @@
     <div class="content">
       <div class="content-table flex-column">
         
-        <!-- Section for Farmers and Suppliers -->
-        <div class="flex-row">
+        <!-- Placeholder for Image -->
+        <div class="flex-row faint-blue">
           <div class="flex-item flex-column">
-            <p class="text">
-              The app works for both farmers and suppliers:
-            </p>
-            
-            <!-- Details for Farmers -->
-            <h2>For Farmers:</h2>
-            <p class="text">
-              <strong>Account Setup:</strong><br>
-              Farmers sign up and log in using their credentials.<br>
-              <strong>Posting Products:</strong><br>
-              Farmers upload product photos and details like name, category, etc.
-            </p>
-            
-            <!-- Details for Suppliers -->
-            <h2>For Suppliers:</h2>
-            <p class="text">
-              <strong>Account Setup:</strong><br>
-              Suppliers create accounts and log in.<br>
-              <strong>Browsing and Selecting Products:</strong><br>
-              Suppliers browse categories, view product details, and contact farmers.<br>
-              <strong>Communication:</strong><br>
-              Suppliers can chat with farmers in real-time.
-            </p>
-          </div>
-        </div>
-        
-        <!-- Dropdown Menu Section -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2>Dropdown Menu</h2>
-            <p class="text">
-              Explanation of dropdown menu functionality.
-            </p>
-            <!-- Custom dropdown examples -->
-            <div class="control-group">
-              <!-- Dropdowns with items -->
-              <div class="custom-dropdown stretch-on-mobile">
-                <a href="javascript:void(0)">Dropdown Menu (No JavaScript)</a>
-                <div>
-                  <a href="javascript:void(0)">Item 1</a>
-                  <a href="javascript:void(0)">Item 2</a>
-                  <a href="javascript:void(0)">Item 3</a>
-                  <a href="javascript:void(0)">Item 4</a>
-                  <a href="javascript:void(0)">Item 5</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Radio Button Section -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2>Radio Button</h2>
-            <p class="text">
-              Explanation of radio button usage.
-            </p>
-            <!-- Custom radio buttons -->
-            <div class="control-group">
-              <div class="custom-radio custom-radio-left">
-                <input type="radio" name="playback-speed" value="slow" id="speed-slow">
-                <label for="speed-slow">Slow</label>
-              </div>
-              <!-- More radio button examples -->
-            </div>
-          </div>
-        </div>
-        
-        <!-- Dialog Button and Box Section -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2>Dialog Button and Box</h2>
-            <p class="text">
-              Explanation of dialog buttons and boxes.
-            </p>
-            <!-- Custom dialog buttons -->
-            <div class="control-group">
-              <button id="dialog-btn-1" class="custom-button-flat"><img src="img/setting.png"><span>Dialog 1</span></button>
-              <!-- More dialog button examples -->
-            </div>
-            <!-- Dialog boxes -->
-            <div id="dialog-1" title="Dialog 1" data-role="none">
-              <p>Dialog content.</p>
-            </div>
-            <!-- More dialog boxes -->
-          </div>
-        </div>
-        
-        <!-- Unsplash Photo Picker Section -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2>Unsplash Photo Picker</h2>
-            <p class="text">
-              Explanation of Unsplash photo picker.
-            </p>
-            <!-- Custom photo picker -->
-            <div class="custom-survey add-top-margin add-bottom-margin" id="create-vision">
-              <!-- Photo selection area -->
-              <a id="vision-image-frame" class="painting-frame" href="javascript:void(0)">
-                <div class="painting-frame-item">
-                  <img id="vision-image" class="painting-frame-image" src="img/choose-image.png">
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Tab Section -->
-        <div class="flex-row">
-          <div class="flex-item flex-column full-width">
-            <h2>Tab</h2>
-            <p class="text">
-              Explanation of tab interface.
-            </p>
-            <!-- Custom tab menu and content -->
-            <div class="custom-tab" id="custom-tab">
-              <!-- Tab menu items -->
-              <div class="custom-tab-menu center">
-                <a class="custom-tab-menu-item active" data-content="iframe">Iframe</a>
-                <!-- More tab menu items -->
-              </div>
-              <!-- Tab content sections -->
-              <div class="custom-tab-content" data-content="iframe">
-                <p>Content for iframe tab.</p>
-                <iframe class="iframe-in-tab" src="https://example.com"></iframe>
-              </div>
-              <!-- More tab content sections -->
-            </div>
-          </div>
-        </div>
-        
-        <!-- Legend Section -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2>Legend</h2>
-            <p class="text">
-              Explanation of legend usage.
-            </p>
-            <!-- Custom legend items -->
-            <div class="custom-legend noselect">
-              <h3 class="legend-title">Fruits (No JavaScript)</h3>
-              <div class="legend-scale">
-                <!-- Legend labels -->
-                <ul class="legend-labels">
-                  <li><span style="background:#b05ed6;"></span>Apple</li>
-                  <!-- More legend items -->
-                </ul>
-                <!-- Legend source -->
-                <div class="legend-source">Source: <a target="_blank" href="https://github.com/example">GitHub</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Gallery Section -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2>Gallery Generated Using JavaScript</h2>
-            <p class="text">
-              Explanation of dynamically generated gallery.
-            </p>
-            <!-- Gallery container -->
-            <div class="gallery add-top-margin-small add-bottom-margin-small" id="gallery"></div>
-          </div>
-        </div>
-        
-        <!-- Masonry Section -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2>Masonry Generated Using JavaScript</h2>
-            <p class="text">
-              Explanation of dynamically generated masonry layout.
-            </p>
-            <!-- Masonry container -->
-            <div class="masonry add-top-margin-small add-bottom-margin-small" id="masonry"></div>
-          </div>
-        </div>
-        
-        <!-- Credits Section -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2>Credits</h2>
-            <p class="text">
-              Credits and acknowledgments section.
-            </p>
-            <!-- Credits information -->
-            <div class="credits">
-              <p>Developed by John Doe</p>
-              <p>Contact: john.doe@example.com</p>
-            </div>
+            <h2 class="faint-blue">Insert Your Image Here</h2>
+            <!-- Example of image insertion -->
+            <img src="path/to/your/image.jpg" alt="Your Image">
           </div>
         </div>
         
