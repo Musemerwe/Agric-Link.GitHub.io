@@ -3,7 +3,8 @@
 
 <head>
   <title>Agric Link</title>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
@@ -20,46 +21,13 @@
       opacity: 1 !important;
       font-weight: 700 !important;
     }
-
-    /* New styles */
-    .dark-green-background {
-      background-color: #004d00; /* Dark Green */
-      padding: 20px 0;
-    }
-
-    .image-slider {
-      position: relative;
-      overflow: hidden;
-      height: 200px; /* Adjust height as needed */
-      margin-top: 20px;
-    }
-
-    .slider-wrapper {
-      display: flex;
-      animation: slide 10s infinite linear;
-    }
-
-    .slider-image {
-      width: 100%;
-      height: auto;
-      flex-shrink: 0;
-    }
-
-    @keyframes slide {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
   </style>
 </head>
 
 <body>
   <div class="menu-container"></div>
   <div class="content-container">
-    <!--Start Header-->
+    <!-- Start Header -->
     <div class="banner" style="background: url('img/farmer.jpg') no-repeat center; background-size: cover; height: 300px;"></div>
     <div class="banner">
       <div class="banner-table flex-column">
@@ -73,28 +41,47 @@
         </div>
       </div>
     </div>
-    <!--End Header-->
-    <div class="content dark-green-background">
+    <!-- End Header -->
+    <div class="content">
       <div class="content-table flex-column">
-        <!--Start Intro-->
-        <!-- Add content here -->
-        <!-- End Intro-->
-
-        <!--Start Image Slider-->
-        <div class="image-slider">
-          <div class="slider-wrapper">
-            <img src="img/sign up.jpg" alt="Image 1" class="slider-image">
-            <img src="img/log in.jpg" alt="Image 2" class="slider-image">
-            <img src="img/products display.jpg" alt="Image 3" class="slider-image">
-            <img src="img/chat page.jpg" alt="Image 4" class="slider-image">
+        <!-- Start Intro -->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <img class="image" src="img/transit.jpg" alt="Transit Image">
+          </div>
+          <div class="flex-item flex-column">
+            <p class="text text-large">
+              <strong>Meet the Team:</strong><br>
+              <a href="mailto:charles@example.com">Musemerwe Charles</a>, charles@gmail.com<br>
+              <a href="mailto:stuart@example.com">Owani Stuart</a>, stuart@gmail.com<br>
+              <a href="mailto:timothy@example.com">Opifeni Timothy Jurua</a>, timothy@gmail.com<br>
+              <a href="mailto:steven@example.com">Ssemambo Steven</a>, steven@gmail.com<br>
+              <a href="mailto:joshua@example.com">Shima Joshua</a>, joshua@gmail.com
+            </p>
+            <p class="text add-top-margin">
+              Agric Link offers a simple and efficient platform for farmers to list their products, set prices, and reach a wider audience. Buyers can browse listings, compare prices, and purchase directly from the source, ensuring fresh and high-quality products. Join us in fostering a sustainable food system that benefits both farmers and consumers.
+            </p>
+            <h3>Table of Content</h3>
+            <ul>
+              <li><a href="#text-only">Text Only</a></li>
+              <li><a href="#buttons-and-inputs">Buttons and Inputs</a></li>
+              <li><a href="#images-and-image-button">Images and Image Button</a></li>
+              <li><a href="#text-around-image">Text around Image</a></li>
+              <li><a href="#centered-image-and-table">Centered Image and Table</a></li>
+              <li><a href="#adaptive-image">Adaptive Image</a></li>
+              <li><a href="#text-with-images-and-videos">Text with Images and Videos</a></li>
+              <li><a href="#iframe">Iframe</a></li>
+              <li><a href="#list-of-projects">List of Projects</a></li>
+              <li><a href="#gallery">Gallery (responsive size)</a></li>
+              <li><a href="#masonry">Masonry (responsive size)</a></li>
+              <li><a href="#survey">Survey</a></li>
+            </ul>
           </div>
         </div>
-        <!--End Image Slider-->
+        <!-- End Intro -->
       </div>
     </div>
   </div>
 </body>
 
 </html>
-
-             
