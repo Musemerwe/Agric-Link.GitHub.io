@@ -23,15 +23,15 @@
 
     /* New Styles */
     .header-bg {
-      background-color: #f4f4f4; /* Light grey */
+      background-color: #dfffdf; /* Light green */
     }
 
     .content-bg {
-      background-color: #ffffff; /* White */
+      background-color: #dfffdf; /* Light green */
     }
 
     .intro-bg {
-      background-color: #f8f8f8; /* Slightly darker grey */
+      background-color: #dfffdf; /* Light green */
     }
 
     .banner {
@@ -46,7 +46,7 @@
   </style>
 </head>
 
-<body>
+<body class="header-bg">
   <div class="menu-container"></div>
   <div class="content-container header-bg">
     <!--Start Header-->
@@ -85,11 +85,11 @@
               <li>Uploading Images: Farmers use the image picker to select images from their device. The selected image is uploaded to Firebase Storage, and the URL is saved in Firestore.</li>
               <li>Posting Details: Farmers fill out a form with product details such as name, category, quantity, price, location, and contact information. This information, along with the image URL, is stored in Firestore under a 'products' collection.</li>
             </ul>
-            <p class="points">Supplier's Workflow:</p>
+            <p class="points">Buyer's Workflow:</p>
             <p class="points">Account Creation:</p>
             <ul>
-              <li>Register: Suppliers will create an account by providing their email and password on the registration page.</li>
-              <li>Login: Suppliers log in using their email and password on the login page.</li>
+              <li>Register: Buyer will create an account by providing their email and password on the registration page.</li>
+              <li>Login: Buyer log in using their email and password on the login page.</li>
             </ul>
 
             <p class="points">Browsing Products:</p>
@@ -97,7 +97,7 @@
               <li>Home Page: After logging in, suppliers land on the home page (`/home`), which displays a list of product categories (e.g., Fruits, Vegetables).</li>
               <li>Selecting a Category: Suppliers click on a category to view a list of products within that category.</li>
             </ul>
-   
+
             <p class="points">Viewing Product Details:</p>
             <ul>
               <li>Product List Page: Upon selecting a category, suppliers are taken to the product list page (`/product_list`) where they can see all products in that category..</li>
@@ -109,7 +109,7 @@
             <ul>
               <li>Product Details Page: Suppliers are taken to a page (`/product_details`) displaying detailed information about the selected product, including the farmers who posted it, their quantity, price, location, and contact information.</li>
               <li>Initiating Chat: Suppliers can initiate a chat with the farmer by clicking the 'Chat with Farmer' button.</li>
-            </ul> 
+            </ul>
             <p class="text text-large">
               <strong>Chat Functionality:</strong><br>
               Chat Page: When a supplier clicks to chat with a farmer, they are taken to a chat page (`/chat`) where they can send and receive messages in real-time.<br>
@@ -138,5 +138,4 @@
   </div>
 </body>
 
-  </html>
-  
+</html>
