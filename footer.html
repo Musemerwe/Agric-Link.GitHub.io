@@ -1,21 +1,164 @@
-<div class="banner" style="background-image: url('img/Bringo-Fresh.jpg');">
-  <div class="banner-table flex-column">
-    <div class="flex-row">
-      <div class="flex-item flex-column">
-        <h3>Technical Details</h3>
-        <p>
-        <ol>
-          <li>Firebase Authentication: Manages user registration and login, ensuring secure access to the app.</li>
-          <li>Firestore Database: Stores user information, product details, and chat messages.</li>
-          <li>Firebase Storage: Stores images uploaded by farmers and provides URLs to be used in the app.</li>
-          <li>Image Picker: Allows farmers to select images from their device to upload.</li>
-          <li>Provider: Manages state within the app to ensure data consistency and smooth user experience.</li>
-          <li>Location: Displays the location of the farmer.</li>
-        </ol>    
-        </p>
+<!doctype html>
+<html>
 
-        <p>By following these workflows, the app provides a seamless experience for both farmers and suppliers, facilitating efficient communication and transactions in the agricultural sector.</p>
+<head>
+  <title>Agric Link</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/footer.js"></script>
+  <style>
+    .menu-index {
+      color: rgb(255, 255, 255) !important;
+      opacity: 1 !important;
+      font-weight: 700 !important;
+    }
+
+    /* New Styles */
+    .header-bg {
+      background-color: #dfffdf; /* Light green */
+    }
+
+    .content-bg {
+      background-color: #dfffdf; /* Light green */
+    }
+
+    .intro-bg {
+      background-color: #dfffdf; /* Light green */
+    }
+
+    .banner {
+      background: url('img/blackcows.jpeg') no-repeat center;
+      background-size: cover;
+      height: 533px;
+    }
+
+    .points {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body class="header-bg">
+  <div class="menu-container"></div>
+  <div class="content-container header-bg">
+    <!--Start Header-->
+    <div class="banner"></div>
+    <div class="banner">
+      <div class="banner-table flex-column">
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 class="add-top-margin-small">Welcome to AGRIC LINK</h2>
+            <p class="text">
+              The app operates with distinct workflows for farmers and suppliers, ensuring a smooth user experience tailored to their specific needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Header-->
+    <div class="content content-bg">
+      <div class="content-table flex-column">
+        <!--Start Intro-->
+        <div class="flex-row intro-bg">
+          <div class="flex-item flex-column">
+            <img class="image" src="img/laptopblacks.jpeg">
+          </div>
+          <div class="flex-item flex-column" style="background-image: url('img/black man.jpg'); background-size: cover; background-position: center; color: #ffffff;">
+            <p class="points">Farmer's Workflow:</p>
+            <p class="points">Account Creation:</p>
+            <ul>
+              <li>Register: Farmers will create an account by providing their email and password on the registration page.</li>
+              <li>Login: Farmers log in using their email and password on the login page.</li>
+            </ul>
+
+            <p class="points">Posting Products:</p>
+            <ul>
+              <li>Farmer Account Page: After logging in, farmers navigate to their account page where they can upload images of their agricultural products and provide detailed information.</li>
+              <li>Uploading Images: Farmers use the image picker to select images from their device. The selected image is uploaded to Firebase Storage, and the URL is saved in Firestore.</li>
+              <li>Posting Details: Farmers fill out a form with product details such as name, category, quantity, price, location, and contact information. This information, along with the image URL, is stored in Firestore under a 'products' collection.</li>
+            </ul>
+            <p class="points">Buyer's Workflow:</p>
+            <p class="points">Account Creation:</p>
+            <ul>
+              <li>Register: Buyer will create an account by providing their email and password on the registration page.</li>
+              <li>Login: Buyer log in using their email and password on the login page.</li>
+            </ul>
+
+            <p class="points">Browsing Products:</p>
+            <ul>
+              <li>Home Page: After logging in, suppliers land on the home page (`/home`), which displays a list of product categories (e.g., Fruits, Vegetables).</li>
+              <li>Selecting a Category: Suppliers click on a category to view a list of products within that category.</li>
+            </ul>
+
+            <p class="points">Viewing Product Details:</p>
+            <ul>
+              <li>Product List Page: Upon selecting a category, suppliers are taken to the product list page (`/product_list`) where they can see all products in that category..</li>
+              <li>Selecting a Product: Suppliers click on a specific product to view more details.</li>
+              <li>Description of point 3.</li>
+            </ul>
+
+            <p class="points">Viewing Farmer Details:</p>
+            <ul>
+              <li>Product Details Page: Suppliers are taken to a page (`/product_details`) displaying detailed information about the selected product, including the farmers who posted it, their quantity, price, location, and contact information.</li>
+              <li>Initiating Chat: Suppliers can initiate a chat with the farmer by clicking the 'Chat with Farmer' button.</li>
+            </ul>
+            <p class="text text-large">
+              <strong>Chat Functionality:</strong><br>
+              Chat Page: When a supplier clicks to chat with a farmer, they are taken to a chat page (`/chat`) where they can send and receive messages in real-time.<br>
+              Real-time Messaging: Messages are stored in Firestore under a specific chat document for each farmer-supplier pair, and updates are reflected in real-time.
+            </p>
+            <p class="text text-large">
+              <strong>Meet the Team:</strong><br>
+              <a href="mailto:charles@example.com">Musemerwe Charles</a>, charles@gmail.com<br>
+              <a href="mailto:stuart@example.com">Owani Stuart</a>, stuart@gmail.com<br>
+              <a href="mailto:timothy@example.com">Opifeni Timothy Jurua</a>, timothy@gmail.com<br>
+              <a href="mailto:steven@example.com">Ssemambo Steven</a>, steven@gmail.com<br>
+              <a href="mailto:joshua@example.com">Shima Joshua</a>, joshua@gmail.com
+            </p>
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <p class="text add-top-margin">
+              Agric Link offers a simple and efficient platform for farmers to list their products, set prices, and reach a wider audience. Buyers can browse listings, compare prices, and purchase directly from the source, ensuring fresh and high-quality products. Join us in fostering a sustainable food system that benefits both farmers and consumers.
+            </p>
+          </div>
+        </div>
+        <!--End Intro-->
       </div>
     </div>
   </div>
-</div>
+
+  <!-- Technical Details Section -->
+  <div class="banner" style="background-image: url('img/chickenco.jpeg');">
+    <div class="banner-table flex-column">
+      <div class="flex-row">
+        <div class="flex-item flex-column">
+          <h3>Technical Details</h3>
+          <p>
+          <ol>
+            <li>Firebase Authentication: Manages user registration and login, ensuring secure access to the app.</li>
+            <li>Firestore Database: Stores user information, product details, and chat messages.</li>
+            <li>Firebase Storage: Stores images uploaded by farmers and provides URLs to be used in the app.</li>
+            <li>Image Picker: Allows farmers to select images from their device to upload.</li>
+            <li>Provider: Manages state within the app to ensure data consistency and smooth user experience.</li>
+            <li>Location: Displays the location of the farmer.</li>
+          </ol>    
+          </p>
+          <p>By following these workflows, the app provides a seamless experience for both farmers and suppliers, facilitating efficient communication and transactions in the agricultural sector.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
