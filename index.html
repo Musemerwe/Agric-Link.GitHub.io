@@ -24,6 +24,26 @@
       opacity: 1 !important;
       font-weight: 700 !important;
     }
+    /* Container for the images */
+    .image-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    /* Style for each image */
+    .image-container img {
+        width: 100%;
+        height: auto;
+        max-width: 200px; /* Adjust as needed */
+        border: 2px solid #ddd; /* Optional border */
+        border-radius: 8px; /* Optional rounded corners */
+    }
+    /* Style for each column */
+    .image-container div {
+        flex: 1;
+        margin: 10px;
+        box-sizing: border-box;
+    }
   </style>
 </head>
 
@@ -83,6 +103,14 @@
           </div>
         </div>
         <!-- End Intro -->
+      </div>
+    </div>
+    <div class="flex-item flex-column" style="background-image: url('img/jack.jpg'); background-size: cover; background-position: center; color: #ffffff;">
+      <div class="image-container">
+        <div><img src="img/sign up.jpg" alt="signup"></div>
+        <div><img src="img/log in.jpg" alt="login"></div>
+        <div><img src="img/products display.jpg" alt="products"></div>
+        <div><img src="img/chat page.jpg" alt="chat"></div>
       </div>
     </div>
   </div>
