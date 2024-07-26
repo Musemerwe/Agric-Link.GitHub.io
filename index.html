@@ -85,3 +85,43 @@
 </body>
 
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Images in Columns</title>
+    <style>
+        /* Container for the images */
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        /* Style for each image */
+        .image-container img {
+            width: 100%;
+            height: auto;
+            max-width: 200px; /* Adjust as needed */
+            border: 2px solid #ddd; /* Optional border */
+            border-radius: 8px; /* Optional rounded corners */
+        }
+        /* Style for each column */
+        .image-container div {
+            flex: 1;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Four Images in Columns</h1>
+    <div class="image-container">
+        <div><img src="img/man.jpg" alt="Man"></div>
+        <div><img src="img/woman.jpg" alt="Woman"></div>
+        <div><img src="img/boy.jpg" alt="Boy"></div>
+        <div><img src="img/girl.jpg" alt="Girl"></div>
+    </div>
+</body>
+</html>
+
