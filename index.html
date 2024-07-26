@@ -16,6 +16,9 @@
   <script src="js/menu.js"></script>
   <script src="js/footer.js"></script>
   <style>
+    .light-green-background {
+      background-color: #dfffdf; /* Light green color */
+    }
     .menu-index {
       color: rgb(255, 255, 255) !important;
       opacity: 1 !important;
@@ -24,7 +27,7 @@
   </style>
 </head>
 
-<body>
+<body class="light-green-background">
   <div class="menu-container"></div>
   <div class="content-container">
     <!-- Start Header -->
@@ -61,7 +64,8 @@
             <p class="text add-top-margin">
               Agric Link offers a simple and efficient platform for farmers to list their products, set prices, and reach a wider audience. Buyers can browse listings, compare prices, and purchase directly from the source, ensuring fresh and high-quality products. Join us in fostering a sustainable food system that benefits both farmers and consumers.
             </p>
-<!--             <h3>Table of Content</h3>
+            <!-- Uncomment this section if you want to include a table of contents -->
+            <!-- <h3>Table of Content</h3>
             <ul>
               <li><a href="#text-only">Text Only</a></li>
               <li><a href="#buttons-and-inputs">Buttons and Inputs</a></li>
@@ -74,8 +78,8 @@
               <li><a href="#list-of-projects">List of Projects</a></li>
               <li><a href="#gallery">Gallery (responsive size)</a></li>
               <li><a href="#masonry">Masonry (responsive size)</a></li>
-              <li><a href="#survey">Survey</a></li> -->
-            </ul>   
+              <li><a href="#survey">Survey</a></li>
+            </ul> -->
           </div>
         </div>
         <!-- End Intro -->
@@ -85,44 +89,3 @@
 </body>
 
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Four Images in Columns</title>
-    <style>
-        /* Container for the images */
-        .image-container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        /* Style for each image */
-        .image-container img {
-            width: 100%;
-            height: auto;
-            max-width: 200px; /* Adjust as needed */
-            border: 2px solid #ddd; /* Optional border */
-            border-radius: 8px; /* Optional rounded corners */
-        }
-        /* Style for each column */
-        .image-container div {
-            flex: 1;
-            margin: 10px;
-            box-sizing: border-box;
-        }
-    </style>
-</head>
-<body>
-   <div class="flex-item flex-column" style="background-image: url('img/jack.jpg'); background-size: cover; background-position: center; color: #ffffff;">  
-  <div class="image-container">
-        <div><img src="img/sign up.jpg" alt="signup"></div>
-        <div><img src="img/log in.jpg" alt="login"></div>
-        <div><img src="img/products display.jpg" alt="products"></div>
-        <div><img src="img/chat page.jpg" alt="chat"></div>
-    </div>
-  </div>
-</body>
-</html>
-
